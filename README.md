@@ -10,12 +10,26 @@ There are two audiences for this document:
 - [Creating a single-use registration token](#for-the-central-keycloak-admin-creating-a-single-use-registration-token) — for the **central Keycloak admin**.
 
 ---
+## Architecture Overview
+![architecture overview](docs/architecture_overview.png)
+
+## Node (Data Partner) Hardware Requirements
+
+The full requirements for the data partner nodes can be found on the project sharepoint [here](https://ugentbe.sharepoint.com/:p:/r/sites/PR202302994/_layouts/15/Doc.aspx?sourcedoc=%7BACB2792D-D18B-4793-A098-887615E65785%7D&file=BRIDGE%20NETWORK%20-%20Hardware%20Requirements.pptx&action=edit&mobileredirect=true&wdwpf=doclib-c) or in this GitHub repository [here](https://github.com/BRIDGE-NETWORK/.github). If you don't have access, reach out to someone at your BNN.
+
+* Processor: Quad Core (AMD or ARM)​​
+* Memory: 16Gb (32Gb recommended)​​
+* Storage: SSD 1Tb or more​​
+* OS: Ubuntu 24.04​​
+* Docker and Git installed
+
+**IMPORTANT:** Preference for separate server or a virtual machine on an existing server, rather than a partition on an existing server
 
 ## Registering a local node
 
 ### Prerequisites
 
-- A Linux host (the provisioning script targets Debian/Ubuntu).
+- A Linux host that meets the requirements above (the provisioning script targets Debian/Ubuntu).
 - A **single-use Initial Access Token** from your BRIDGE/Keycloak administrator (see the [admin section](#for-the-central-keycloak-admin-creating-a-single-use-registration-token)). The token is short-lived and can register exactly one node — request a fresh one for each node.
 
 ### Registering the node
